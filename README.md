@@ -24,3 +24,7 @@ One major issue was that most of the team wasn't familiar with Java or used to w
 
 This hackathon was unlike any other experience. None of the students on the team knew each other prior to the hackathon. It was overall, one of the greatest experiences that we all had. During the first 12 hours, our group focused more on finding a project to work on. We came up with about 5 ideas each from each other. Ultimately, we came down to 3 ideas that we could potentially work on. After speaking to a mentor, we finalized the idea and all started researching what to work on. Some of us knew very little about how to build out the idea, but we strived together to get it done. CTP is set on two distinct paths - Web Development and Data Science - Both of which rarely use Java in their tech stack. This project let our team either learn more about Java or refresh ourselves of what we learned in the past about Java.
 
+## Future Features (Would be cool to implement)
+
+[ ] Add NLP and ML into application so that the app automatically take the video recordings during the lecture
+[ ] Automatically save recording to Google Drive and/or Dropbox
