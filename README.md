@@ -16,10 +16,9 @@ One major issue was that most of the team wasn't familiar with Java or used to w
 
 ## Some of Our Features
 
-[x] Record your screen anywhere at any time 
-[x] Save description of video 
-[x] Upload to Google Drive and/or Dropbox 
-[x] Access video snippets in one directory 
+[x] Record your screen anywhere at any time
+[x] Save description of video
+[x] Access video snippets in one directory
 
 ## What We Learned From This Hackathon
 
