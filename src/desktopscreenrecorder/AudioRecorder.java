@@ -70,28 +70,10 @@ public class AudioRecorder extends Thread {
 
             AudioInputStream audioInputStream = new AudioInputStream(mic);
             
-            String currentDir = System.getProperty("user.dir");
-            
             File f = new File("audio_output.wav");
             
-            String fromFile = currentDir + "\\" + f;
-            String toFile = currentDir + "\\Classroom";
-            
-            Path source = Paths.get(fromFile);
-            Path target = Paths.get(toFile);
-            
-            try {
-                
-                AudioSystem.write(audioInputStream, AudioFileFormat.Type.WAVE, f);
-                System.out.println("done writing to file");
-                
-                // Rename or move a file to other path
-                // if target exists, throws FileAlreadyExistsException
-                Files.move(source, target);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
+            AudioSystem.write(audioInputStream, AudioFileFormat.Type.WAVE, f);
+            System.out.println("done writing to file");
 
             //AudioSystem.write(audioInputStream, AudioFileFormat.Type.WAVE, f);
             //System.out.println("done writing to file");
