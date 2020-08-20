@@ -18,6 +18,7 @@ import javax.sound.sampled.DataLine;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.Mixer;
 import javax.sound.sampled.TargetDataLine;
+import java.nio.file.*;
 
 public class AudioRecorder extends Thread {
 
@@ -57,25 +58,46 @@ public class AudioRecorder extends Thread {
     public  void run() {
         
         initRecording();
-        statRecording();
+        startRecording();
 
     }
 
-    private void statRecording() {
+    private void startRecording() {
 
 
         try {
-              mic.start();
+            mic.start();
 
             AudioInputStream audioInputStream = new AudioInputStream(mic);
-
+            
+            String currentDir = System.getProperty("user.dir");
+            
             File f = new File("audio_output.wav");
+            
+            String fromFile = currentDir + "\\" + f;
+            String toFile = currentDir + "\\Classroom";
+            
+            Path source = Paths.get(fromFile);
+            Path target = Paths.get(toFile);
+            
+            try {
+                
+                AudioSystem.write(audioInputStream, AudioFileFormat.Type.WAVE, f);
+                System.out.println("done writing to file");
+                
+                // Rename or move a file to other path
+                // if target exists, throws FileAlreadyExistsException
+                Files.move(source, target);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
-            AudioSystem.write(audioInputStream, AudioFileFormat.Type.WAVE, f);
-            System.out.println("done writing to file");
 
-        } catch (IOException ex) {
-            ex.printStackTrace();
+            //AudioSystem.write(audioInputStream, AudioFileFormat.Type.WAVE, f);
+            //System.out.println("done writing to file");
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
     }

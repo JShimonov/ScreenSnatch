@@ -34,6 +34,8 @@ public class DesktopScreenRecorder {
         Rectangle screenRect = new Rectangle(Toolkit.getDefaultToolkit().getScreenSize());
         Robot robot = new Robot();
         
+        String currentDir = System.getProperty("user.dir");
+        System.out.println("dir: " + currentDir);
              
         File file = new File("outputVideo.mp4");
 
