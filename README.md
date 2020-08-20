@@ -23,6 +23,8 @@ One major issue was that most of the team wasn't familiar with Java or used to w
 [x] Save description of video
 [x] Access video snippets in one directory
 
+<img src = 'https://github.com/JShimonov/ScreenSnatch/blob/master/src/desktopscreenrecorder/ScreenSnatchAppImg.png' />
+
 ## What We Learned From This Hackathon
 
 This hackathon was unlike any other experience. None of the students on the team knew each other prior to the hackathon. It was overall, one of the greatest experiences that we all had. During the first 12 hours, our group focused more on finding a project to work on. We came up with about 5 ideas each from each other. Ultimately, we came down to 3 ideas that we could potentially work on. After speaking to a mentor, we finalized the idea and all started researching what to work on. Some of us knew very little about how to build out the idea, but we strived together to get it done. CTP is set on two distinct paths - Web Development and Data Science - Both of which rarely use Java in their tech stack. This project let our team either learn more about Java or refresh ourselves of what we learned in the past about Java.
