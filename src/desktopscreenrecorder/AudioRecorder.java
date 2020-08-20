@@ -62,34 +62,42 @@ public class AudioRecorder extends Thread {
 
     }
 
+    /**
+     * starts recording audio when 'Start Recording' is pressed on MainScreenRecorderFrame
+     */
     private void startRecording() {
 
-
+        // have to try/catch in the case that AudioSystem isn't able to write into file
         try {
             mic.start();
 
             AudioInputStream audioInputStream = new AudioInputStream(mic);
             
+            // creates file to save mic recording
             File f = new File("audio_output.wav");
             
+            // writes audio from mic into the file
             AudioSystem.write(audioInputStream, AudioFileFormat.Type.WAVE, f);
+            
+            // print out once done for confirmation
             System.out.println("done writing to file");
-
-            //AudioSystem.write(audioInputStream, AudioFileFormat.Type.WAVE, f);
-            //System.out.println("done writing to file");
-
-        } catch (Exception e) {
-            e.printStackTrace();
+            
+        } catch (IOException io) {
+            io.getStackTrace();
         }
 
     }
     
     
-    
-       public void stopRecording() {
+    /**
+     * stops the audio recording when 'Stop Recording" is pressed on MainScreenRecordeerFrame
+     */
+    public void stopRecording() {
+        // stop mic from recording
         mic.stop();
-        
         mic.close();
+        
+        // print out once done for confirmation
         System.out.println("Recording ended");
 
     }

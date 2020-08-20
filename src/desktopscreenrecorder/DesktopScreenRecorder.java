@@ -33,9 +33,6 @@ public class DesktopScreenRecorder {
 
         Rectangle screenRect = new Rectangle(Toolkit.getDefaultToolkit().getScreenSize());
         Robot robot = new Robot();
-        
-        String currentDir = System.getProperty("user.dir");
-        System.out.println("dir: " + currentDir);
              
         File file = new File("outputVideo.mp4");
 
@@ -56,10 +53,17 @@ public class DesktopScreenRecorder {
 
     }
 
+    /**
+     * Returns a video recording made off of the list of BufferImages
+     * @param imageList : takes in a list of BufferedImages in order to compile into a video
+     * @param file : This is the output in which the List<BufferedImage> is going to be stored in
+     * @throws IOException 
+     */
     public static void makeVideoFromImages(List<BufferedImage> imageList, File file) throws IOException {
 
-        AWTSequenceEncoder sequenceEncoder = AWTSequenceEncoder.createSequenceEncoder(file, 25);
+        AWTSequenceEncoder sequenceEncoder = AWTSequenceEncoder.createSequenceEncoder(file, 25);    // 25 signifies the FPS
 
+        // iterate thru imageList
         for (int i = 0; i < imageList.size(); i++) {
 
             System.out.println("list encode " + i);
@@ -67,6 +71,7 @@ public class DesktopScreenRecorder {
 
         }
         
+        // clear the buffers
         sequenceEncoder.finish();
 
     }
