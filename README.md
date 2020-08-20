@@ -2,6 +2,9 @@
 
 A desktop application that allows students to "snatch" a recording of the important parts of a lecture rather than having to watch the lecture in totality
 
+Here's our logo by the way:
+![alt text](https://github.com/JShimonov/ScreenSnatch/blob/master/src/desktopscreenrecorder/logo.png "Logo Title Text 1")
+
 ## Inspiration
 
 Over Spring semester most, if not all colleges moved to teaching remotely. Most thought of this to be a great idea given that professors would have to record their lectures so that students can always go back to them. Nevertheless, in most cases, professors would start a lecture and end up going off on a tangent to speak about unimportant or irrelevant information. As students our attention span is already very low; realisticly, we only care about the important information taught in the lecture. So, when students decide to start reviewing for an exam, it becomes very time consuming to just listen to a professor rant about irrelevant or redundant information. Instead, why not just listen to a shortened, more concise lecture that only talks about the important concepts taught in class. Presenting ScreenSnatch - rather than listening to that 1.5-hour lecture - you now have an opportunity to keep a short recording of the important topics discussed in class, which could then be used to study off of.
